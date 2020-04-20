@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo "Building...!!"
                 sh 'ls -l'
-                sh 'mvn3 clean package'
+                mvn3 clean package
             }
         }
         stage('Test'){
