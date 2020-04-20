@@ -8,7 +8,9 @@ pipeline {
             steps {
                 echo "Building...!!"
                 sh 'ls -l'
-                mvn3 clean package
+                withMaven(maven : 'mvn3') {
+                    sh 'mvn3 clean package'
+                }
             }
         }
         stage('Test'){
